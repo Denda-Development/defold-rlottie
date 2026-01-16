@@ -385,13 +385,16 @@ bool LottieParserImpl::NextArrayValue()
 
 int LottieParserImpl::GetInt()
 {
-    if (st_ != kHasNumber || !v_.IsInt()) {
+    if (st_ != kHasNumber) {
+        dmLogError("GetInt Error: expected number, st_=%d", (int)st_);
         st_ = kError;
         RAPIDJSON_ASSERT(false);
         return 0;
     }
 
-    int result = v_.GetInt();
+    double d = v_.GetDouble();
+    int result = (int)d;
+
     ParseNext();
     return result;
 }
