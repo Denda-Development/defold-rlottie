@@ -17,6 +17,7 @@
  */
 
 #include "lottieparser.h"
+#include <dmsdk/sdk.h>
 
 //#define DEBUG_PARSER
 
