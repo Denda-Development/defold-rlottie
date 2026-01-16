@@ -17,7 +17,7 @@
  */
 
 #include "lottieparser.h"
-#include <dmsdk/sdk.h>
+//#include <dmsdk/sdk.h>
 
 //#define DEBUG_PARSER
 
@@ -387,7 +387,7 @@ bool LottieParserImpl::NextArrayValue()
 int LottieParserImpl::GetInt()
 {
     if (st_ != kHasNumber) {
-        dmLogError("GetInt Error: expected number, st_=%d", (int)st_);
+        //dmLogError("GetInt Error: expected number, st_=%d", (int)st_);
         st_ = kError;
         RAPIDJSON_ASSERT(false);
         return 0;
