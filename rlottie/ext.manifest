@@ -21,9 +21,11 @@ platforms:
     x86_64-linux:
         context:
             flags:      ["-std=c++14"]
+
     wasm-web:
         context:
-            flags:      ["-std=c++14"]
+            flags:      ["-std=c++14", "-frtti"]
+
     js-web:
         context:
-            flags:      ["-std=c++14"]
+            flags:      ["-std=c++14", "-frtti"]
